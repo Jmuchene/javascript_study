@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p>Javascript Objects</p>
+  <script>
+    let person = {
+      name: "Stacy",
+      age: 20,
+      height: "170cms",
+      job: "Software Engineer",
+      ismarried: false,
+      "full address": "Loresho"
+    }
+    console.log(person.job)
+    let height = person.height
+    console.log(height)
+
+    console.log(person["age"])
+    console.log(person["full address"])
+
+    let key = "name"
+    console.log(person.key)
+    console.log(person[key])
+
+    //nested objects
+    let user = {
+      name: "Alice",
+      hobbies: ["cycling", "painting"],
+      posts: [
+        {
+          id: 1,
+          title: "My first post",
+          comments: [
+            { id: 101, text: "Great post!" },
+            { id: 102, text: "Thanks for sharing." },
+          ],
+        },
+        {
+          id: 2,
+          title: "Another day",
+          comments: [],
+        },
+      ],
+    };
+
+
+    // console.log(user.posts[0].comments[1].text)
+    // console.log(Object.keys(user))
+    let keys = Object.keys(user)
+    let values = Object.values(user)
+    let entries = Object.entries(user)
+    console.log("Keys:", keys)
+    console.log("Values:", values)
+    console.log("Entries", entries)
+
+    //object task
+    let my_object = [
+      23, "Jane", 560,
+      ["Lesson", "Maths",
+        { "currency": "KES" }]
+      , 987, 76, "John"]
+
+    let display = my_object[3][2].currency
+    console.log(display)
+    console.log(my_object[2])
+    console.log(my_object[3][1])
+    //reverse 
+    let rev = my_object[4].toString().split('')
+    let value = rev.reverse()
+    let num = value.join('')
+    console.log("Reversed Value", value)
+    console.log("Join", num)
+    //add jane
+
+    my_object.splice(6, 6, "Jane")
+    console.log(my_object)
+  </script>
+</body>
+
+</html>

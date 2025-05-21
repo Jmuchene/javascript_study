@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>JS Arrays</p>
+    <script>
+        let arr=[1,2,3,4,5,"John", false,[5,6,7,[8,9,10,[11,"Jane"]]]]
+        //size of array
+        let arrsize=arr.length
+        console.log("Size of Array:", arrsize)
+        //add elements to an array
+      arr.push(true)
+      arr.push(100,101,"Mark")
+      console.log("Pushed array", arr )
+      //add element at the start of an array
+      arr.unshift("JS","Python","Rust")
+      console.log("Unshifted array", arr)
+
+      //remove the last element of an array
+      arr.pop()
+      console.log("removed element array", arr)
+
+      //remove first element from array
+      arr.shift()
+      console.log("Shifted array", arr)
+
+      //reverse the array
+      arr.reverse()
+      console.log("Reversed Array", arr)
+      //last occurrence of an element in an array
+      let arr0=arr.lastIndexOf("John")
+      console.log(arr0)
+
+      //take a portion of the array/
+      let arr2=arr.slice(2,7)
+      console.log("sliced array", arr2)
+
+      //copies array elements to another postion
+      let copy=arr.copyWithin(1,arr,arr0)
+      console.log("copied array",copy)
+    </script>
+</body>
+</html>

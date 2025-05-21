@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let company = {
+            name: "TechNova Inc.",
+            founded: 2012,
+            departments: {
+                engineering: {
+                    head: {
+                        name: "Alice Johnson",
+                        position: "VP of Engineering",
+                    },
+                    teams: {
+                        frontend: {
+                            lead: "Bob Smith",
+                            members: [
+                                {
+                                    name: "Carol",
+                                    role: "Senior Developer",
+                                    skills: {
+                                        js: true, react: true,
+                                        vue: false, db: [
+                                            {
+                                                postgresql: false,
+                                                nosql: {
+
+                                                    mongodb: ["True", {
+                                                        learning: false,
+                                                    }]
+
+                                                }
+                                            }
+                                        ]
+                                    },
+                                },
+                                {
+                                    name: "David",
+                                    role: "Junior Developer",
+
+                                    skills: { js: 1, react: 2, vue: 3 },
+                                },
+                            ],
+                        },
+                        backend: {
+                            lead: "Eve Black",
+                            members: [
+                                {
+                                    name: "Frank",
+                                    role: "Senior Backend Dev",
+                                    languages: ["Python", "Go", "Node.js"],
+                                },
+                                {
+                                    name: "Grace",
+                                    role: "DevOps",
+                                    certifications: {
+                                        aws: true,
+                                        docker: true,
+                                        kubernetes: true,
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                },
+
+            },
+
+        };
+        let results=company.departments.engineering.teams.frontend.members[0].skills.db[0].nosql.mongodb[1].learning
+        console.log(results)
+        console.log(company.departments.engineering.teams.backend.members[0].languages[2])
+        console.log(company.departments.engineering.teams.backend.members[1].certifications.kubernetes)
+        let lencert=company.departments.engineering.teams.backend.members[1].certifications
+        console.log(Object.keys(lencert).length)
+        let skills=(Object.keys(company.departments.engineering.teams.frontend.members[1].skills).length)
+        console.log("Skills length: ",skills)
+        //reverse the skills object
+        console.log(Object.entries(company.departments.engineering.teams.frontend.members[1].skills).reverse())
+        
+        //console.log(Object.entries(skills).reverse())
+</script>
+</body>
+
+</html>

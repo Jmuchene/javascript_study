@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="text-center">String Task: Javascript</p>
+    <script>
+        //clean variable
+        let f_name= " JOHn ."
+        f_name=f_name.toLowerCase().trim()
+        console.log("First name:", f_name)
+        
+        //slicing sentences
+        let sentence_one="The Dog Breed is German Shepherd"
+        //sentence_one=["The" ,"Dog", "Breed" ,"is" ,"German" ,"Shepherd"]
+        
+        sentence_one=sentence_one.slice(8,23)
+        console.log("Sliced sentence:",sentence_one)
+        // sentence2
+        sentence_two ="Defeats for the Clinton forces, this was her moment of triumph"
+        sentence_two=sentence_two.slice(16,30)
+        console.log("second sliced sentence:",sentence_two)
+        //sentence 3
+       let sentence_three="The lazy dog; ran so fast; it hit the wall.";
+       sentence_three=sentence_three.replace(" ",";")
+       console.log("Sentence three:",sentence_three)
+
+        //Arrays
+    let colors=['red', 'green', 'blue']
+    colors[1]="pink"
+    console.log(colors)
+    console.log("length of colors array",colors.length)
+    //pop
+    colors.pop()
+    console.log("Popped array",colors)
+     
+    let fruits=["mango","apple","banana","orange"]
+    fruits.splice(1,2)
+    console.log(fruits)
+    //splice adding elements
+    let numbers=[1,2,3,4,5]
+    numbers.splice(5,0,7,8)
+    console.log(numbers)
+    //splice replace
+    let names=["Jane","James","Akumu","Mbwesa"]
+    names.splice(1,0,"Mike")
+    console.log("spliced names",names)
+//arrays
+    let sport=["tennis","football","swimming"]
+    let games=["chess","monopoly","jenga"]
+    let activities=sport.concat(games)
+    activities.shift()
+    console.log("activities",activities)
+    //splice removing elements
+    //sourceaarray
+    let county=["Nairobi","Kiambu","Kericho","Kisumu","Mombasa"]
+county=county.slice(2,4)
+    county.splice(0,0,"Homabay","Embu")
+    console.log("Counties:",county)
+
+    </script>
+</body>
+</html>
