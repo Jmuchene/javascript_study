@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 11</title>
+</head>
+
+<body>
+    <script>
+        // function calculateAge(dob) {
+        //     let birthDate = new Date(dob); // Convert input string to Date object
+        //     let today = new Date(); // Get today's date
+
+        //     let years = today.getFullYear() - birthDate.getFullYear();
+        //     let months = today.getMonth() - birthDate.getMonth();
+        //     let days = today.getDate() - birthDate.getDate();
+
+        //     // Adjust for negative values
+        //     if (days < 0) {
+        //         months--;
+        //         let previousMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+        //         days += previousMonth.getDate();
+        //     }
+
+        //     if (months < 0) {
+        //         years--;
+        //         months += 12;
+        //     }
+
+        //     console.log(`Age: ${years} years, ${months} months, ${days} days`);
+        // }
+
+        // // Example: Get input from the user
+        // let dob = prompt("Enter your date of birth (YYYY-MM-DD): ");
+        // calculateAge(dob);    
+        let full_birthdate = prompt("Enter your date of birth in the format: YYYY-MM-DD")
+        let date_parts = full_birthdate.split('-')
+        let birthyear = parseInt(date_parts[0])
+        let birthmonth = parseInt(date_parts[1])
+        let birthdate = parseInt(date_parts[2])
+
+        let todaydate = 30
+        let todaymonth = 5
+        let todayyear = 2025
+
+        let monthdays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+        if (birthdate > todaydate) {
+            todaymonth--
+            todaydate += monthdays[(todaymonth - 1 + 12) % 12]
+        }
+
+        let calculated_day = todaydate - birthdate;
+        let calculated_month;
+        let calculated_year;
+        if (birthmonth > todaymonth) {
+            calculated_month = 12 - [birthmonth - todaymonth]
+            calculated_year = todaymonth - birthyear
+        }
+        console.log(`Age in years ${calculated_year},Months${calculated_month},Days ${calculated_day}`)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typecasting</title>
+
+</head>
+<body>
+    <script>
+        let data='123'
+        let num=parseInt(data)
+        console.log(Number(data))
+        console.log(typeof(num))
+//converting to a string
+
+let data2='678'
+let str=data2.toString()
+console.log(str)
+console.log(typeof(str))
+
+//Objects
+let car={
+    make:"Toyota",
+    yom:2005,
+    past_owners:{
+        first:"Joyce",
+        second:"Trevor",
+        third:"Jane",
+        fourth: {
+            owner1:"John",
+            owner2:"Anne",
+        }
+    }
+
+}
+//optional chaining
+console.log(car?.past_owners?.third.owner1)
+
+//spread operator
+let num1=[1,2,3]
+let num2=[4,5,6]
+let num3=[...num1,num2]
+console.log(num3)
+
+let table={
+    height:"90cm",
+    width:"100cm"
+
+}
+let table2={
+    color:"gray",
+    condition:"new"
+}
+let table0={
+    size:"large",
+    material:"MDF"
+}
+let table3={
+    ...table,...table2,...table0,
+    date_sold:"2025-05-23"
+}
+
+console.log(table3)
+    </script>
+</body>
+</html>

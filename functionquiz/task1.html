@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+
+<body>
+    <script>
+        //  #Write a program that prompts the user to enter the base and height of a triangle and returns its area.
+        function triangle_area(h, b) {
+            let area = 1 / 2 * b * h;
+            return area;
+        }
+        let h = parseInt(prompt("Enter the height: "))
+        let b = parseInt(prompt("Enter the base: "))
+       let tri_area=triangle_area(h, b)
+        console.log("The area of the Triangle: ", tri_area)
+    </script>
+</body>
+
+</html>

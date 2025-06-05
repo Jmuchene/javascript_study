@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8</title>
+</head>
+
+<body>
+    <script>
+        let my_speed = parseInt(prompt('Enter the speed: '))
+        function check_speed(speed){
+            let speedlimit=70
+        if (speed <= 70) {
+            return"ok"
+                }
+let overspeed=speed-speedlimit
+let points=overspeed/5-(overspeed%5)/5
+         {
+            if (overspeed %5 !==0){
+                points +1
+            }
+            if(points>12){
+                return "Licence suspended"
+            }
+            let points = Math.floor((speed - 70) / 5);
+            if (points > 12) {
+                console.log("License suspended. Points: ", points)
+            }
+            else {
+                console.log('Points', points)
+            }
+        }
+
+    </script>
+</body>
+
+</html>

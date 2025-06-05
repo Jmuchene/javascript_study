@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 15</title>
+</head>
+<body>
+    <script>
+        // Function to calculate gross salary
+function grossSalary(basicSalary, benefits) {
+    return basicSalary + benefits;
+}
+
+// Function to calculate NHIF based on gross salary
+function calcNHIF(gross) {
+    let nhif;
+
+    if (gross >= 100000) {
+        nhif = 1700;
+    } else if (gross >= 90000 && gross <= 99999) {
+        nhif = 1600;
+    } else if (gross >= 80000 && gross <= 89999) { // Fixed 800000 typo
+        nhif = 1500;
+    } else if (gross >= 70000 && gross <= 79999) {
+        nhif = 1400;
+    } else {
+        nhif = 500;
+    }
+
+    return nhif;
+}
+
+// Get user input
+let basicSalary = parseFloat(prompt("Enter basic salary:"));
+let benefits = parseFloat(prompt("Enter benefits:"));
+
+// Calculate gross salary and NHIF
+let gross = grossSalary(basicSalary, benefits);
+let nhifAmount = calcNHIF(gross);
+
+// Display results
+console.log("Gross Salary:", gross);
+console.log("NHIF Deduction:", nhifAmount);
+    </script>
+</body>
+</html>

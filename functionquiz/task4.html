@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+<body>
+    <P>Write a program which accepts email as form input or from terminal. Validate the email by checking if it's a valid email. 
+</P>
+    <script>
+      function validateEmail(email) {
+    email = email.trim().toLowerCase(); // Remove spaces and convert to lowercase
+
+    if (email.indexOf("@") === -1) {
+        console.log("Invalid email");
+    } else if (
+        email.endsWith(".com") ||
+        email.endsWith(".org") ||
+        email.endsWith(".edu") ||
+        email.endsWith(".gov") ||
+        email.endsWith(".net")
+    ) {
+        console.log("Welcome: " + email);
+    } else {
+        console.log("Invalid email");
+    }
+}
+
+// Get user input
+var email = prompt("Enter your email address:");
+validateEmail(email);
+    </script>
+</body>
+</html>

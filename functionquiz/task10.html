@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 10</title>
+</head>
+<body>
+    <script>
+        // Define product list with names, prices, and quantities
+let products = [
+    ["omo", "30kshs", 300],
+    ["milk", "50kshs", 200],
+    ["bread", "45kshs", 359],
+    ["coffee", "5kshs", 79]
+];
+
+let totalQuantity = 0; // Initialize total stock counter
+
+// Loop through each product and sum up the quantities
+for (let i = 0; i < products.length; i++) {
+    totalQuantity += products[i][2]; // Accessing quantity from each product
+}
+
+// Print the total stock
+console.log("Total stock quantity:", totalQuantity);
+       
+
+    </script>
+</body>
+</html>

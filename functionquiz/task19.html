@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 19</title>
+</head>
+
+<body>
+    <script>
+        function calculateSalary(basicSalary, benefits) {
+            let grossSalary = basicSalary + benefits;
+            let nhif;
+
+            if (grossSalary >= 100000) {
+                nhif = 1700;
+            } else if (grossSalary >= 90000) {
+                nhif = 1600;
+            } else if (grossSalary >= 80000) {
+                nhif = 1500;
+            } else if (grossSalary >= 70000) {
+                nhif = 1400;
+            } else if (grossSalary >= 60000) {
+                nhif = 1300;
+            } else if (grossSalary >= 50000) {
+                nhif = 1200;
+            } else {
+                nhif = 500;
+            }
+
+            let nssf = grossSalary * 0.06;
+            let nhdf = grossSalary * 0.015;
+            let taxableIncome = grossSalary - (nssf + nhdf + nhif);
+            let personalRelief = 2400;
+            let tax = 0;
+
+            if (taxableIncome <= 24000) {
+                tax = taxableIncome * 0.10;
+            } else if (taxableIncome <= 32333) {
+                tax = (24000 * 0.10) + ((taxableIncome - 24000) * 0.25);
+            } else if (taxableIncome <= 500000) {
+                tax = (24000 * 0.10) + (8333 * 0.25) + ((taxableIncome - 32333) * 0.30);
+            } else if (taxableIncome <= 800000) {
+                tax = (24000 * 0.10) + (8333 * 0.25) + (467667 * 0.30) + ((taxableIncome - 500000) * 0.325);
+            } else {
+                tax = (24000 * 0.10) + (8333 * 0.25) + (467667 * 0.30) + (300000 * 0.325) + ((taxableIncome - 800000) * 0.35);
+            }
+
+            let payee = Math.max(tax - personalRelief, 0);
+
+            // console.log(`Gross Salary: ${grossSalary.toFixed(2)}`);
+            // console.log(`NHIF Deduction: ${nhif.toFixed(2)}`);
+            // console.log(`NSSF Deduction: ${nssf.toFixed(2)}`);
+            // console.log(`NHDF Deduction: ${nhdf.toFixed(2)}`);
+            // console.log(`Taxable Income: ${taxableIncome.toFixed(2)}`);
+            console.log(`PAYE: ${payee.toFixed(2)}`);
+        }
+
+        let basicSalary = parseFloat(prompt("Enter basic salary:"));
+        let benefits = parseFloat(prompt("Enter benefits:"));
+
+        calculateSalary(basicSalary, benefits);
+    </script>
+</body>
+
+</html>

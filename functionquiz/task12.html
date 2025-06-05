@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 12</title>
+</head>
+
+<body>
+    <script>
+        function large_num(numbers) {
+
+            // Find the largest number
+            let largest = Math.max(...numbers);
+            return largest;
+        }
+        // Get user input and store in an array
+        let numbers = [];
+        for (let i = 0; i < 4; i++) {
+            numbers[i] = parseInt(prompt("Enter number " + (i + 1) + ": "));
+        }
+        let largest = large_num(numbers);
+        // Print the largest number
+        console.log("The largest number is:", largest);
+
+    </script>
+</body>
+
+</html>

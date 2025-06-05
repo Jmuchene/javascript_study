@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7</title>
+</head>
+
+<body>
+    <p>Write that prompts the user to input student marks.</p>
+    <script>
+        // Initialize subjects
+        let subjects = ["English", "Maths", "Science", "Kiswahili"];
+        let marks = {};
+        let grades = {};
+
+        // Get user input
+        function getMarks() {
+            for (var i = 0; i < subjects.length; i++) {
+                var score = parseInt(prompt("Enter the marks for " + subjects[i] + ": "));
+                marks[subjects[i]] = score;
+            }
+        }
+
+        // Assign grades based on marks
+        function assignGrades() {
+            for (var subject in marks) {
+                var mark = marks[subject];
+                if (mark >= 80) {
+                    grades[subject] = "A";
+                } else if (mark >= 70) {
+                    grades[subject] = "B";
+                } else if (mark >= 60) {
+                    grades[subject] = "C";
+                } else if (mark >= 50) {
+                    grades[subject] = "D";
+                } else {
+                    grades[subject] = "E";
+                }
+            }
+        }
+
+        // Run the functions
+        getMarks();
+        assignGrades();
+
+        // Display results
+        console.log("Marks:", marks);
+        console.log("Grades:", grades);
+    </script>
+
+</body>
+
+</html>

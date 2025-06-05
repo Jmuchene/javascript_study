@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+<body>
+    <script>
+      function checkPassword() {
+    let correct_pwd = "admin@123";
+    let attempts = 3;
+
+    for (let i = 1; i <= attempts; i++) {
+        let password = prompt("Enter password:");
+
+        if (password === correct_pwd) {
+            console.log("Welcome");
+            break;
+        } else {
+            let remaining_attempts = attempts - i;
+            if (remaining_attempts > 0) {
+                console.log("Wrong password, you have " + remaining_attempts + " attempts remaining");
+            } else {
+                console.log("Account blocked");
+            }
+        }
+    }
+}
+
+// Call the function
+checkPassword();
+
+
+    </script>
+</body>
+</html>

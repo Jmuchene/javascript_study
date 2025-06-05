@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task14</title>
+</head>
+<body>
+    <script>
+        function num_input(num1,num2) {
+    let value;
+    while (true) {
+        value = prompt(num);
+        if (!isNaN(value) && value.trim() !== "") {
+            return parseFloat(value); // Convert input to a float
+        } else {
+            alert("Invalid character entered. Please enter a valid number.");
+        }
+    }
+}
+
+// Get valid inputs from user
+let num1 = prompt("Enter the first number:");
+let num2 = prompt("Enter the second number:");
+num_input(num1,num2)
+// Calculate and display the sum
+let sum = num1 + num2;
+console.log("The sum is:", sum);
+alert("The sum is: " + sum);
+    </script>
+</body>
+</html>

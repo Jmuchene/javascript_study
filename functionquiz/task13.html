@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 13</title>
+</head>
+<body>
+    <script>
+        // Correct credentials
+        function credentials(){
+
+        let correctEmail = "admin@mail.com";
+let correctPwd = "admin@123";
+let attempts = 3;
+
+// Loop for login attempts
+for (let i = 1; i <= 3; i++) {
+    let email = prompt("Enter email:").toLowerCase().trim(); // Convert to lowercase for case-insensitivity
+    let password = prompt("Enter password:");
+
+    if (email === correctEmail && password === correctPwd) {
+        console.log("Welcome");
+        break; // Exit loop on successful login
+    } else {
+        let remainingAttempts = attempts - i;
+        if (remainingAttempts > 0) {
+            console.log(`Invalid username or password. ${remainingAttempts} attempts remaining.`);
+        } else {
+            console.log("Account blocked.");
+        }
+    }
+}
+        }
+        
+        credentials();
+    </script>
+</body>
+</html>

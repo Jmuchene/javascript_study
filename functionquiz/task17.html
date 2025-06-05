@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 17</title>
+</head>
+
+<body>
+    <script>
+        function calculateSalary(basicSalary, benefits) {
+            let grossSalary = basicSalary + benefits;
+            let nhdf = grossSalary * 0.015;
+            console.log("Gross Salary:", grossSalary, "NHDF:", nhdf);
+        }
+
+        let basicSalary = parseFloat(prompt("Enter basic salary:"));
+        let benefits = parseFloat(prompt("Enter benefits:"));
+
+        calculateSalary(basicSalary, benefits);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAYE Tax Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>PAYE Tax Calculator</h2>
+    <div class="container">
+        <form>
+  <div class="mb-3">
+    <label for="salary" class="form-label">Enter basic Salary</label>
+    <input type="basicSal" class="form-control" id="salary" placeholder="Enter salary">
+    
+  </div>
+   <div class="mb-3">
+    <label for="benefits" class="form-label">Enter Benefits</label>
+    <input type="benefitsData" class="form-control" id="benefits" placeholder="Enter benefits">
+  </div>
+  <!-- <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div> -->
+  <button class="btn btn-primary" onclick="calculateSalary(basicSalary, benefits)">Calculate</button>
+  <div class="mb-3">
+    <label for="taxResult" class="form-label">Results:</label>
+    <input type="result" class="form-control" id="taxResult" placeholder="0">
+  </div>
+  
+</form>
+        
+       
+    <script src="project.js"></script>
+</body>
+</html>

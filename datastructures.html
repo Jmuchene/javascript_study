@@ -83,9 +83,9 @@
         let skills=(Object.keys(company.departments.engineering.teams.frontend.members[1].skills).length)
         console.log("Skills length: ",skills)
         //reverse the skills object
-        console.log(Object.entries(company.departments.engineering.teams.frontend.members[1].skills).reverse())
+        console.log(Object.values(company.departments.engineering.teams.frontend.members[1].skills).reverse())
         
-        //console.log(Object.entries(skills).reverse())
+        //console.log(Object.values(skills).reverse())
 </script>
 </body>
 

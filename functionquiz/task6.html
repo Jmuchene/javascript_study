@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6</title>
+</head>
+
+<body>
+    <script>
+        function large_num(var1, var2, var3) {
+            // Determine the largest number
+            if (var1 > var2 && var1 > var3) {
+                console.log(var1 + " is the largest");
+            } else if (var2 > var1 && var2 > var3) {
+                console.log(var2 + " is the largest");
+            } else {
+                console.log(var3 + " is the largest");
+            }
+            }
+            // Get user input
+            let var1 = parseInt(prompt("Enter the first number: "));
+            let var2 = parseInt(prompt("Enter the second number: "));
+            let var3 = parseInt(prompt("Enter the third number: "));
+            large_num(var1, var2, var3);
+
+        
+    </script>
+
+</body>
+
+</html>

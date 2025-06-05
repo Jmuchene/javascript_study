@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task16</title>
+</head>
+<body>
+    <script>
+        // Function to calculate gross salary
+function grossSalary(basicSalary, benefits) {
+    return basicSalary + benefits;
+}
+
+// Function to calculate NSSF deduction
+function calcNSSF(grossSalary) {
+    return grossSalary > 18000 ? grossSalary * 0.06 : 0;
+}
+
+// Get user input
+let basicSalary = parseFloat(prompt("Enter basic salary:"));
+let benefits = parseFloat(prompt("Enter benefits:"));
+
+// Calculate gross salary and NSSF
+let gross = grossSalary(basicSalary, benefits);
+let nssfAmount = calcNSSF(gross);
+
+// Display results
+console.log("Gross Salary:", gross);
+console.log("NSSF Deduction:", nssfAmount);
+    </script>
+</body>
+</html>
